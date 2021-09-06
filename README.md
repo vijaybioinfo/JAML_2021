@@ -57,7 +57,8 @@ for various papers.
 
 `SiEs05_tcr_analysis.R` contains the TCR re-analysis of T cells from
 patients with HNSCC. Also how to run a Differential Gene Expression
-[analysis](https://github.com/vijaybioinfo/dgea).
+[analysis](https://github.com/vijaybioinfo/dgea). Finally, some viz for this
+dataset.
 
 It also includes some SiEs012 viz.
 
