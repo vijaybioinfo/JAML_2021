@@ -1,4 +1,4 @@
-## JAML 2021
+## JAML immunotherapy preferentially targets tumor-infiltrating tissue-resident memory T cells
 
 This repository contains the scripts used to analyzed our asthma airways bulk and single-cell data.
 
@@ -9,16 +9,17 @@ Division of Vaccine Discovery
 La Jolla Institute for Immunology
 La Jolla, CA 92037, USA
 
-### JAML immunotherapy preferentially targets tumor-infiltrating tissue-resident memory T cells
-
 Global description
 ---
 
 *Demultiplexing libraries*: Cell Ranger was used to demultiplex the 10x libraries. And our in-house
 mapping [pipeline](https://github.com/ndu-UCSD/LJI_RNA_SEQ_PIPELINE_V2) was used for the bulk data.
+
 *Quality control*: An in-house [script](https://github.com/vijaybioinfo/quality_control)
 was used to explore the quality of the data and select the thresholds.
+
 *Doublets*: Scrublet was used to detect doublets in the single-cell data.
+
 *Clustering*: Seurat was used to cluster the data.
 
 For more specific information about the data generation and processing, please check the methods.
