@@ -1,0 +1,15 @@
+---
+project_name: SiEs12_Mo_1_CD45_3H
+input_expression: "/home/ciro/ad_hoc/amica/raw/cellranger_SiEs12/count/SiEs12_Mo_1_CD45_3H_Gex/outs/filtered_feature_bc_matrix"
+metadata:
+  - "/home/ciro/amica/info/SiEs12_metadata_library.csv"
+  - "/home/ciro/ad_hoc/amica/results/ab_capture/SiEs12_Mo_1_CD45_3H/step_0_annotation.rdata"
+output_dir: "/home/ciro/ad_hoc/amica/results/quality_control/"
+ident_vars: ["orig~", "HT_"]
+filtering:
+  nFeature_RNA: [1500, 6000, 1]
+  nCount_RNA: [1000, 50000, 1]
+  percent.mt: [-Inf, 5, 1]
+  expr: "!orig.HT_ID %in% c('Doublet', 'Negative')"
+  nSamples_expressed: 0.001 # % of cells in which that gene is present
+...

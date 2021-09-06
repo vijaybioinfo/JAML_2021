@@ -1,0 +1,23 @@
+---
+project: "SiEs12"
+run: "/mnt/NovaSeq/210503_A00475_0311_BHKT23DSXY_NV047"
+fastqs_dir: "/mnt/BioAdHoc/Groups/vd-vijay/cramirez/seqteam/raw/NV047"
+output_dir: "/mnt/BioAdHoc/Groups/vd-vijay/cramirez/amica/raw/cellranger_SiEs12"
+samples: "SiEs12" # sample sheet or a pattern to select samples from 'fastqs_dir'
+transcriptome: # Cell Ranger reference
+  count: /mnt/BioAdHoc/Groups/vd-vijay/references/refdata-cellranger-mm10-3.0.0
+  vdj: /mnt/BioAdHoc/Groups/vd-vijay/references/refdata-cellranger-vdj-GRCm38-alts-ensembl-3.1.0
+aggregation: "/home/ciro/amica/info/SiEs12_metadata_library.csv"
+feature_ref:
+  main: /home/ciro/amica/info/SiEs12_fbarcodes.csv
+job: # PBS settings
+  template: "/home/ciro/scripts/cellranger_wrappeR/routine_template.sh"
+  walltime: {count: 50:00:00, vdj: 40:00:00, fbarcode: 24:00:00, aggr: 24:00:00}
+  mem: {count: 70gb, vdj: 40gb, fbarcode: 32gb, aggr: 30gb}
+  ppn: {count: 10, vdj: 4, fbarcode: 4, aggr: 6}
+  nodes: 1
+  depend: none # job id; jobs will run acter this dependency sucessfully finishes
+  submit: yes
+cellranger: "/home/ciro/bin/cellranger-3.1.0/cellranger"
+pipeline: "/home/ciro/scripts/cellranger_wrappeR/"
+...

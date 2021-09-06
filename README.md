@@ -27,7 +27,7 @@ For more specific information about the data generation and processing, please c
 Code
 ---
 
-##### Single-cell RNA-seq integration analyses
+### Single-cell RNA-seq integration analyses
 
 *Download*
 The main script to download the data is `download_sc_data.R`, but not all
