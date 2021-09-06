@@ -53,8 +53,11 @@ round of analysis, some clusters were filtered out with
 `integration/clustering_further_analyses.R` shows a few visualizations useful
 for various papers.
 
-#### SiEs05 TCR analysis
-File: SiEs05_tcr_analysis.R
+### SiEs05 TCR analysis
+
+`SiEs05_tcr_analysis.R` contains the TCR re-analysis of T cells from
+patients with HNSCC. Also how to run a Differential Gene Expression
+[analysis](https://github.com/vijaybioinfo/dgea).
 
 It also includes some SiEs012 viz.
 
